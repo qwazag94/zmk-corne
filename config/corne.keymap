@@ -3,7 +3,6 @@
 
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/keypos_def/keypos_36keys.h"
-#include "../zmk-nodefree-config/international_chars/german.dtsi"
 
 /* layer and key shortcuts */
 
@@ -12,9 +11,6 @@
 #define DEF 0  // layer shortcuts, must match order in which they are defined below
 #define NUM 1
 #define NAV 2
-
-
-
 
 
 /* custom behaviors */
@@ -27,14 +23,6 @@ ZMK_BEHAVIOR(hrm, hold_tap,
     bindings = <&kp>, <&kp>;
 )
 
-/*
-// tap: backspace | shift + tap: delete | hold: num layer
-ZMK_BEHAVIOR(bs_del_num, mod_morph,
-    bindings = <&lt NUM BSPC>, <&kp DEL>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-)
-
-*/
 ZMK_BEHAVIOR(xtra, hold_tap,
     flavor = "hold-preferred";
     tapping-term-ms = <280>;
@@ -42,24 +30,17 @@ ZMK_BEHAVIOR(xtra, hold_tap,
     bindings = <&kp>, <&kp>;
 )
 
-
-
-
-// combos
 #undef COMBO_TERM
 #define COMBO_TERM 40  // timeout of 40ms (default is 30ms if omitted)
 ZMK_COMBO(combo_esc,  &kp ESC, LT1 LT0, DEF)  // custom sleep macro, only active on NAV layer
 ZMK_COMBO(combo_tab,  &kp TAB, RT1 RT0, DEF) 
-//ZMK_COMBO(combo_copy,   &kp LC(C),  LB2 LB3, ALL)  // Ctrl + C, active on all layers
-//ZMK_COMBO(combo_paste,  &kp LC(V),  LB1 LB2, ALL)  // Ctrl + V, active on all layers
 
-/* keymap */
 
 ZMK_LAYER(default_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
           &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O         &xtra LBKT P
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &hrm LCTRL A   &hrm LALT S  &hrm LSHFT D  &hrm LGUI F   &kp G             &kp H         &hrm LGUI J   &hrm LSHIFT K &hrm LALT L   &hrm LCTRL SEMI
+          &hrm LCTRL A  &hrm LALT S   &hrm LSHFT D  &hrm LGUI F   &kp G             &kp H         &hrm LGUI J   &hrm LSHIFT K &hrm LALT L   &hrm LCTRL SEMI
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH
      // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
