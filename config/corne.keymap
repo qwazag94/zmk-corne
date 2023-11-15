@@ -31,8 +31,8 @@ ZMK_BEHAVIOR(xtra, hold_tap,
 
 #undef COMBO_TERM
 #define COMBO_TERM 40  // timeout of 40ms (default is 30ms if omitted)
-ZMK_COMBO(combo_esc,  &kp ESC, LT1 LT0, DEF)  // custom sleep macro, only active on NAV layer
-ZMK_COMBO(combo_tab,  &kp TAB, RT1 RT0, DEF) 
+ZMK_COMBO(combo_esc,  &kp ESC, 4 5, DEF)  // custom sleep macro, only active on NAV layer
+ZMK_COMBO(combo_tab,  &kp TAB, 6 7, DEF) 
 
 
 ZMK_LAYER(default_layer,
