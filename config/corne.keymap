@@ -34,7 +34,6 @@ ZMK_BEHAVIOR(xtra, hold_tap,
 #define COMBO_TERM 40  // timeout of 40ms (default is 30ms if omitted)
 ZMK_COMBO(combo_esc,  &kp ESC, 4 5, DEF)  // custom sleep macro, only active on NAV layer
 ZMK_COMBO(combo_tab_l,  &kp TAB, 6 7, DEF)
-ZMK_COMBO(combo_tab_r,  &kp TAB, 1 2, DEF) 
 
 
 ZMK_LAYER(default_layer,
@@ -45,7 +44,7 @@ ZMK_LAYER(default_layer,
      // ├─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┬─────────────┼─────────────┤
               &none     &kp Z         &kp X         &kp C         &kp V         &kp B               &kp N         &xtra RBKT M  &kp COMMA     &kp DOT       &xtra BSLH FSLH  &none 
      // ╰─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┬─────────────┼─────────────┤
-                                    &xtra LS(LALT) LG(SPACE)      &kp SPACE     &mo NAV             &kp BSPC        &mo NUM       &kp RET 
+                                                    &kp CAPS      &kp SPACE     &mo NAV             &kp BSPC        &mo NUM       &kp RET 
      //                                           ╰─────────────┴─────────────┴─────────────╯    ╰─────────────┴─────────────┴─────────────╯
 )
 
@@ -63,11 +62,11 @@ ZMK_LAYER(num_layer,
 
 ZMK_LAYER(nav_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮    ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-             &none       &kp F11       &kp F12       &kp C_VOL_UP  &kp C_VOL_DN  &kp C_MUTE        &kp HOME       &kp PG_DN    &kp PG_UP     &kp END       ___              &none 
+             &none       &kp F11       &kp F12       &kp C_VOL_UP  &kp C_VOL_DN  &kp C_MUTE        &kp HOME       &kp PG_DN    &kp PG_UP     &kp END       &kp GRAVE        &none 
      // ├─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┬─────────────┼─────────────┤
-             &none       &kp F1        &kp F2        &kp F3        &kp F4        &kp F5            &kp LEFT       &kp DOWN     &kp UP        &kp RIGHT     ___              &none 
+             &none       &kp F1        &kp F2        &kp F3        &kp F4        &kp F5            &kp LEFT       &kp DOWN     &kp UP        &kp RIGHT     &kp TILDE        &none 
      // ├─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┬─────────────┼─────────────┤
-            &none        &kp F6        &kp F7        &kp F8        &kp F9        &kp F10           &bt BT_SEL 0   &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3  ___              &none 
+             &none       &kp F6        &kp F7        &kp F8        &kp F9        &kp F10           &bt BT_SEL 0   &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &none 
      // ╰─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┬─────────────┼─────────────┤
                                                     ___           ___           ___                &kp DELETE        ___       &bt BT_CLR
      //                                           ╰─────────────┴─────────────┴─────────────╯    ╰─────────────┴─────────────┴─────────────╯
