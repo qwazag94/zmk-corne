@@ -32,8 +32,8 @@ ZMK_BEHAVIOR(xtra, hold_tap,
 
 #undef COMBO_TERM
 #define COMBO_TERM 40  // timeout of 40ms (default is 30ms if omitted)
-ZMK_COMBO(combo_esc,  &kp ESC, 4 5, DEF)  // custom sleep macro, only active on NAV layer
-ZMK_COMBO(combo_tab_l,  &kp TAB, 6 7, DEF)
+ZMK_COMBO(combo_esc,  &kp ESC, 3 4, DEF)  // custom sleep macro, only active on NAV layer
+ZMK_COMBO(combo_tab_l,  &kp TAB, 5 6, DEF)
 
 
 ZMK_LAYER(default_layer,
@@ -62,7 +62,7 @@ ZMK_LAYER(num_layer,
 
 ZMK_LAYER(nav_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮    ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-             &none       &kp F11       &kp F12       &kp C_VOL_UP  &kp C_VOL_DN  &kp C_MUTE        &kp HOME       &kp PG_DN    &kp PG_UP     &kp END       &kp GRAVE        &none 
+             &none       &kp F11       &kp F12       &kp C_VOL_UP  &kp C_VOL_DN  &kp C_MUTE        &kp HOME       &kp PG_DN    &kp PG_UP     &kp END       &kp TILDE2       &none 
      // ├─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┬─────────────┼─────────────┤
              &none       &kp F1        &kp F2        &kp F3        &kp F4        &kp F5            &kp LEFT       &kp DOWN     &kp UP        &kp RIGHT     &kp TILDE        &none 
      // ├─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┬─────────────┼─────────────┤
