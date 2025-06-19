@@ -24,7 +24,7 @@ ZMK_BEHAVIOR(hrm, hold_tap,
 )
 
 ZMK_BEHAVIOR(xtra, hold_tap,
-    flavor = "hold-preferred";
+    flavor = "balanced";
     tapping-term-ms = <280>;
     quick-tap-ms = <125>;
     bindings = <&kp>, <&kp>;
@@ -62,7 +62,7 @@ ZMK_LAYER(num_layer,
 
 ZMK_LAYER(nav_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮    ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-             &none       &kp F11       &kp F12       &kp C_VOL_UP  &kp C_VOL_DN  &kp C_MUTE        &kp HOME       &kp PG_DN    &kp PG_UP     &kp END       &kp TILDE2       &none 
+             &none       &kp F11       &kp F12       &kp C_VOL_UP  &kp C_VOL_DN  &kp C_MUTE        &kp HOME       &kp PG_DN    &kp PG_UP     &kp END       &kp GRAVE       &none 
      // ├─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┬─────────────┼─────────────┤
              &none       &kp F1        &kp F2        &kp F3        &kp F4        &kp F5            &kp LEFT       &kp DOWN     &kp UP        &kp RIGHT     &kp TILDE        &none 
      // ├─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┬─────────────┼─────────────┤
